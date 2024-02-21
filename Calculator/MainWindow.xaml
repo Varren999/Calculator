@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Calculator" Height="424" Width="350" ResizeMode="NoResize">
+    <Grid x:Name="GridCalc" ShowGridLines="false">
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "1.25*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="textFields" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="10" FontSize="30"/>
+        <Button x:Name="gyt" Grid.Column="0" Grid.Row="5" FontSize="20" Content=" +/- "/>
+        <Button x:Name="zero" Grid.Column="1" Grid.Row="5" FontSize="20" Content=" 0 "/>
+        <Button x:Name="comma" Grid.Column="2" Grid.Row="5" FontSize="20" Content=" , "/>
+        <Button x:Name="equals" Grid.Column="3" Grid.Row="5" FontSize="20" Content=" = "/>
     </Grid>
 </Window>
