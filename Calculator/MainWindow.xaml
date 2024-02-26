@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="424" Width="350" ResizeMode="NoResize">
+        Title="Calculator" Height="424" Width="350" >
     <Grid x:Name="GridCalc" ShowGridLines="false">
         <Grid.RowDefinitions>
+            <RowDefinition Height = "0.50*"></RowDefinition>
             <RowDefinition Height = "1.25*"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -21,10 +22,26 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="textFields" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="10" FontSize="30"/>
-        <Button x:Name="gyt" Grid.Column="0" Grid.Row="5" FontSize="20" Content=" +/- "/>
-        <Button x:Name="zero" Grid.Column="1" Grid.Row="5" FontSize="20" Content=" 0 "/>
-        <Button x:Name="comma" Grid.Column="2" Grid.Row="5" FontSize="20" Content=" , "/>
-        <Button x:Name="equals" Grid.Column="3" Grid.Row="5" FontSize="20" Content=" = "/>
+        <Label x:Name="Label" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="textFields" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="10" FontSize="30"/>
+        <Button x:Name="clear" Grid.Column="0" Grid.Row="2" FontSize="20" Content=" CE " Margin="2"/>
+        <Button x:Name="reset" Grid.Column="1" Grid.Row="2" FontSize="20" Content=" C " Margin="2"/>
+        <Button x:Name="clearDigit" Grid.Column="2" Grid.Row="2" FontSize="20" Content=" ~ " Margin="2"/>
+        <Button x:Name="slesh" Grid.Column="3" Grid.Row="2" FontSize="20" Content=" / " Margin="2"/>
+        <Button x:Name="seven" Grid.Column="0" Grid.Row="3" FontSize="20" Content=" 7 " Margin="2"/>
+        <Button x:Name="eight" Grid.Column="1" Grid.Row="3" FontSize="20" Content=" 8 " Margin="2"/>
+        <Button x:Name="nine" Grid.Column="2" Grid.Row="3" FontSize="20" Content=" 9 " Margin="2"/>
+        <Button x:Name="star" Grid.Column="3" Grid.Row="3" FontSize="20" Content=" * " Margin="2"/>
+        <Button x:Name="four" Grid.Column="0" Grid.Row="4" FontSize="20" Content=" 4 " Margin="2"/>
+        <Button x:Name="five" Grid.Column="1" Grid.Row="4" FontSize="20" Content=" 5 " Margin="2"/>
+        <Button x:Name="sex" Grid.Column="2" Grid.Row="4" FontSize="20" Content=" 6 " Margin="2"/>
+        <Button x:Name="minus" Grid.Column="3" Grid.Row="4" FontSize="20" Content=" - " Margin="2"/>
+        <Button x:Name="one" Grid.Column="0" Grid.Row="5" FontSize="20" Content=" 1 " Margin="2"/>
+        <Button x:Name="two" Grid.Column="1" Grid.Row="5" FontSize="20" Content=" 2 " Margin="2"/>
+        <Button x:Name="three" Grid.Column="2" Grid.Row="5" FontSize="20" Content=" 3 " Margin="2"/>
+        <Button x:Name="plus" Grid.Column="3" Grid.Row="5" FontSize="20" Content=" + " Margin="2"/>
+        <Button x:Name="comma" Grid.Column="0" Grid.Row="6" FontSize="20" Content=" , " Margin="2"/>
+        <Button x:Name="zero" Grid.Column="1" Grid.Row="6" FontSize="20" Content=" 0 " Margin="2"/>
+        <Button x:Name="equals" Grid.Column="2" Grid.Row="6" FontSize="20" Content=" = " Margin="2" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
