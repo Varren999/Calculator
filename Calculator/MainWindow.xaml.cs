@@ -38,67 +38,67 @@ namespace Calculator
 
         private void one_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "1";
+            textFields.Text = textFields.Text + " 1 ";
         }
 
         private void two_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "2";
+            textFields.Text = textFields.Text + " 2 ";
         }
 
         private void three_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "3";
+            textFields.Text = textFields.Text + " 3 ";
         }
 
         private void plus_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "+";
+            textFields.Text = textFields.Text + " + ";
         }
 
         private void four_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "4";
+            textFields.Text = textFields.Text + " 4 ";
         }
 
         private void five_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "5";
+            textFields.Text = textFields.Text + " 5 ";
         }
 
         private void sex_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "6";
+            textFields.Text = textFields.Text + " 6 ";
         }
 
         private void minus_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "-";
+            textFields.Text = textFields.Text + " - ";
         }
 
         private void seven_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "7";
+            textFields.Text = textFields.Text + " 7 ";
         }
 
         private void eight_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "8";
+            textFields.Text = textFields.Text + " 8 ";
         }
 
         private void nine_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "9";
+            textFields.Text = textFields.Text + " 9 ";
         }
 
         private void multiply_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "*";
+            textFields.Text = textFields.Text + " * ";
         }
 
         private void division_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "/";
+            textFields.Text = textFields.Text + " / ";
         }
 
         private void clearDigit_Click(object sender, RoutedEventArgs e)
@@ -118,13 +118,7 @@ namespace Calculator
 
         private void equals_Click(object sender, RoutedEventArgs e)
         {
-            string[] temp = textFields.Text.Split('+','-','*','/');
-            double[] digits = new double[temp.Length];
-            for(int i = 0; i < temp.Length; i++) 
-            {
-                digits[i] = Convert.ToDouble(temp[i]);
-            }
-
+            
         }
     }
 }
