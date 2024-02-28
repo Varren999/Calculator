@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
+using System.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -32,7 +32,7 @@ namespace Calculator
 
         private void comma_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + ",";
+            textFields.Text = textFields.Text + ".";
         }
 
         private void one_Click(object sender, RoutedEventArgs e)
@@ -108,20 +108,19 @@ namespace Calculator
         private void reset_Click(object sender, RoutedEventArgs e)
         {
             textFields.Text = "";
-            Label.Content = "";
+            Label.Text = "";
         }
 
         private void clearFields_Click(object sender, RoutedEventArgs e)
         {
-            Label.Content = textFields.Text;
+            Label.Text = textFields.Text;
             textFields.Text = "";
         }
 
         private void equals_Click(object sender, RoutedEventArgs e)
-        {
-            Result res = new Result(textFields.Text);
-            Label.Content = textFields.Text;
-            textFields.Text = res.outText;
+        {         
+            Label.Text = textFields.Text;
+            textFields.Text = new DataTable().Compute(textFields.Text, null).ToString();
         }
     }
 }
