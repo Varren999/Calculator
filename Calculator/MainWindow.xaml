@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="430" Width="350" >
+        Title="Calculator" Height="400" Width="300" >
     <Grid x:Name="GridCalc" ShowGridLines="false" Background="Ivory">
         <Grid.RowDefinitions>
             <RowDefinition Height = "0.50*"></RowDefinition>
@@ -22,7 +22,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label x:Name="Label" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
+        <Label x:Name="Label" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="16"/>
         <TextBox x:Name="textFields" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="10" FontSize="30" TextAlignment="Right"/>
         <Button x:Name="clearFields" Grid.Column="0" Grid.Row="2" FontSize="20" Content=" CE " Margin="2" Click="clearFields_Click"/>
         <Button x:Name="reset" Grid.Column="1" Grid.Row="2" FontSize="20" Content=" C " Margin="2" Click="reset_Click"/>
