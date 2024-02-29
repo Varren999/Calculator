@@ -27,7 +27,10 @@ namespace Calculator
 
         private void zero_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "0";
+            if (textFields.Text == "0")
+                textFields.Text = "0";
+            else
+                textFields.Text = textFields.Text + "0";
         }
 
         private void comma_Click(object sender, RoutedEventArgs e)
@@ -37,57 +40,84 @@ namespace Calculator
 
         private void one_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "1";
+            if(textFields.Text == "0")
+                textFields.Text = "1";
+            else
+                textFields.Text = textFields.Text + "1";
         }
 
         private void two_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "2";
+            if (textFields.Text == "0")
+                textFields.Text = "2";
+            else
+                textFields.Text = textFields.Text + "2";
         }
 
         private void three_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "3";
+            if (textFields.Text == "0")
+                textFields.Text = "3";
+            else
+                textFields.Text = textFields.Text + "3";
         }
 
         private void plus_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "+";
+             textFields.Text = textFields.Text + "+";
         }
 
         private void four_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "4";
+            if (textFields.Text == "0")
+                textFields.Text = "4";
+            else
+                textFields.Text = textFields.Text + "4";
         }
 
         private void five_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "5";
+            if (textFields.Text == "0")
+                textFields.Text = "5";
+            else
+                textFields.Text = textFields.Text + "5";
         }
 
         private void sex_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "6";
+            if (textFields.Text == "0")
+                textFields.Text = "6";
+            else
+                textFields.Text = textFields.Text + "6";
         }
 
         private void minus_Click(object sender, RoutedEventArgs e)
-        {
+        {         
             textFields.Text = textFields.Text + "-";
         }
 
         private void seven_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "7";
+            if (textFields.Text == "0")
+                textFields.Text = "7";
+            else
+                textFields.Text = textFields.Text + "7";
         }
 
         private void eight_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "8";
+            if (textFields.Text == "0")
+                textFields.Text = "8";
+            else
+                textFields.Text = textFields.Text + "8";
         }
 
         private void nine_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = textFields.Text + "9";
+            if (textFields.Text == "0")
+                textFields.Text = "9";
+            else
+                textFields.Text = textFields.Text + "9";
         }
 
         private void multiply_Click(object sender, RoutedEventArgs e)
@@ -103,18 +133,20 @@ namespace Calculator
         private void clearDigit_Click(object sender, RoutedEventArgs e)
         {
             textFields.Text = textFields.Text.Remove(textFields.Text.Length - 1);
+            if (textFields.Text.Length == 0)              
+                textFields.Text = "0";
         }
 
         private void reset_Click(object sender, RoutedEventArgs e)
         {
-            textFields.Text = "";
+            textFields.Text = "0";
             Label.Text = "";
         }
 
         private void clearFields_Click(object sender, RoutedEventArgs e)
         {
             Label.Text = textFields.Text;
-            textFields.Text = "";
+            textFields.Text = "0";
         }
 
         private void equals_Click(object sender, RoutedEventArgs e)

@@ -26,7 +26,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="Label" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="20" TextAlignment="Right" Margin="5,0,5,0"/>
-        <TextBlock x:Name="textFields" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="10" FontSize="36" TextAlignment="Right" Background="AntiqueWhite"/>
+        <TextBlock x:Name="textFields" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Margin="10" FontSize="36" TextAlignment="Right" Background="AntiqueWhite" Text="0"/>
         <Button x:Name="clearFields" Grid.Column="0" Grid.Row="2" FontSize="20" Content=" CE " Margin="2" Click="clearFields_Click"/>
         <Button x:Name="reset" Grid.Column="1" Grid.Row="2" FontSize="20" Content=" C " Margin="2" Click="reset_Click"/>
         <Button x:Name="clearDigit" Grid.Column="2" Grid.Row="2" FontSize="20" Content=" &lt; " Margin="2" Click="clearDigit_Click"/>
