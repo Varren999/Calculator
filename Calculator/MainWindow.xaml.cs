@@ -118,9 +118,18 @@ namespace Calculator
         }
 
         private void equals_Click(object sender, RoutedEventArgs e)
-        {         
-            Label.Text = textFields.Text;
-            textFields.Text = new DataTable().Compute(textFields.Text, null).ToString();
+        {
+            try
+            {
+                Label.Text = textFields.Text;
+                textFields.Text = new DataTable().Compute(textFields.Text, null).ToString();
+                //Result rs = new Result(textFields.Text);
+                //textFields.Text = rs.outStr;
+            }
+            catch(Exception)
+            {
+                textFields.Text = "ошибка";
+            }
         }
     }
 }
