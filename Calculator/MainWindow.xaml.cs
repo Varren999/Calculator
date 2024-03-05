@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calculator
 {
@@ -20,6 +9,7 @@ namespace Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        string error = "ошибка";
         public MainWindow()
         {
             InitializeComponent();          
@@ -27,7 +17,7 @@ namespace Calculator
 
         private void zero_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "0";
             else
                 textFields.Text = textFields.Text + "0";
@@ -35,7 +25,7 @@ namespace Calculator
 
         private void comma_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "ошибка")
+            if (textFields.Text == error)
                 textFields.Text = "0";
             else
                 textFields.Text = textFields.Text + ".";
@@ -43,7 +33,7 @@ namespace Calculator
 
         private void one_Click(object sender, RoutedEventArgs e)
         {
-            if(textFields.Text == "0" || textFields.Text == "ошибка")
+            if(textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "1";
             else
                 textFields.Text = textFields.Text + "1";
@@ -51,7 +41,7 @@ namespace Calculator
 
         private void two_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "2";
             else
                 textFields.Text = textFields.Text + "2";
@@ -59,7 +49,7 @@ namespace Calculator
 
         private void three_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "3";
             else
                 textFields.Text = textFields.Text + "3";
@@ -67,7 +57,7 @@ namespace Calculator
 
         private void plus_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "ошибка")
+            if (textFields.Text == error)
                 textFields.Text = "0";
             else
                 textFields.Text = textFields.Text + "+";
@@ -75,7 +65,7 @@ namespace Calculator
 
         private void four_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "4";
             else
                 textFields.Text = textFields.Text + "4";
@@ -83,7 +73,7 @@ namespace Calculator
 
         private void five_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "5";
             else
                 textFields.Text = textFields.Text + "5";
@@ -91,7 +81,7 @@ namespace Calculator
 
         private void sex_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "6";
             else
                 textFields.Text = textFields.Text + "6";
@@ -99,7 +89,7 @@ namespace Calculator
 
         private void minus_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "ошибка")
+            if (textFields.Text == error)
                 textFields.Text = "0";
             else
                 textFields.Text = textFields.Text + "-";
@@ -107,7 +97,7 @@ namespace Calculator
 
         private void seven_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "7";
             else
                 textFields.Text = textFields.Text + "7";
@@ -115,7 +105,7 @@ namespace Calculator
 
         private void eight_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "8";
             else
                 textFields.Text = textFields.Text + "8";
@@ -123,7 +113,7 @@ namespace Calculator
 
         private void nine_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "0" || textFields.Text == "ошибка")
+            if (textFields.Text == "0" || textFields.Text == error)
                 textFields.Text = "9";
             else
                 textFields.Text = textFields.Text + "9";
@@ -131,7 +121,7 @@ namespace Calculator
 
         private void multiply_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "ошибка")
+            if (textFields.Text == error)
                 textFields.Text = "0";
             else
                 textFields.Text = textFields.Text + "*";
@@ -139,7 +129,7 @@ namespace Calculator
 
         private void division_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "ошибка")
+            if (textFields.Text == error)
                 textFields.Text = "0";
             else
                 textFields.Text = textFields.Text + "/";
@@ -147,7 +137,7 @@ namespace Calculator
 
         private void clearDigit_Click(object sender, RoutedEventArgs e)
         {
-            if (textFields.Text == "ошибка")
+            if (textFields.Text == error)
                 textFields.Text = "0";
             else
             {
@@ -186,7 +176,7 @@ namespace Calculator
             }
             catch (Exception)
             {
-                textFields.Text = "ошибка";
+                textFields.Text = error;
             }
         }
     }
