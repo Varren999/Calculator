@@ -165,8 +165,8 @@ namespace Calculator
             {
                 Label.Text = textFields.Text;
                 string str = new DataTable().Compute(textFields.Text, null).ToString();
-                if (str != "∞")
-                    textFields.Text = str;
+                if (str != "∞")               
+                    textFields.Text = str.Replace(',','.');
                 else
                     throw new Exception();
                 //Result rs = new Result(textFields.Text);
