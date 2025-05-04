@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Calculator
 {
@@ -14,45 +11,24 @@ namespace Calculator
 
         public Result(string inStr)
         {
-            if (inStr.Length > 2)
-            {
-                inStr = ReplaceString(inStr);
+            inStr = ReplaceString(inStr);
+
+            if (inStr.Length > 2) 
                 outStr = Resultat(new List<string>(inStr.Split(' ')));
-            }
             else
-            {
-                inStr = ReplaceString(inStr);
+            {             
                 string[] temp = inStr.Split(' ');
                 outStr = Count(temp[0], temp[1], temp[0]);
             }
         }
 
         // Метод подменяет подстроку с пробелами если пользователь ввел текст без пробелов.
-        private string ReplaceString(string text)
-        {
-            string[] old_simbol = { "+", "-", "*", "/", };
-            string[] new_simbol = { " + ", " - ", " * ", " / "};
-            for (int i = 0; i < old_simbol.Length; i++)
-            {
-                text = text.Replace(old_simbol[i], new_simbol[i]);
-            }
-            return text;
-        }
+        private string ReplaceString(string text) => text.Replace("+", " + ").Replace("-", " - ").Replace("*", " * ").Replace("/", " / ");
 
         // Метод убирает пустые строки из массива.
-        private string[] EmptyString(string[] Arr)
+        private string[] EmptyString(string[] Array)
         {
-            string[] temp = Arr;
-            Array.Resize(ref Arr, 3);
-            for (int i = 0, j = 0; i < temp.Length; i++)
-            {
-                if (temp[i] != "" && temp[i] != " ")
-                {
-                    Arr[j] = temp[i];
-                    j++;
-                }
-            }
-            return Arr;
+            return Array.Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
         }
 
         //
@@ -77,10 +53,6 @@ namespace Calculator
                             }
                         }
                     }
-                    //else if(Current.Count > 1)
-                    //{
-
-                    //}
                 }
             }
             catch (Exception ex)
@@ -97,18 +69,9 @@ namespace Calculator
             {
                 switch (sign)
                 {
-                    case "+":
-                        {
-                            return Convert.ToString(Convert.ToDouble(one) + Convert.ToDouble(two));
-                        }
-                    case "-":
-                        {
-                            return Convert.ToString(Convert.ToDouble(one) - Convert.ToDouble(two));
-                        }
-                    case "*":
-                        {
-                            return Convert.ToString(Convert.ToDouble(one) * Convert.ToDouble(two));
-                        }
+                    case "+": return Convert.ToString(Convert.ToDouble(one) + Convert.ToDouble(two));
+                    case "-": return Convert.ToString(Convert.ToDouble(one) - Convert.ToDouble(two));
+                    case "*": return Convert.ToString(Convert.ToDouble(one) * Convert.ToDouble(two));
                     case "/":
                         {
                             if (two == "0")
